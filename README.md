@@ -540,7 +540,7 @@ private extension RoomViewController {
 
 - [Create the updateSelfViewVisiable() Method](#create-the-updateselfviewvisiable-method)
 - [Create the leaveChannel() Method](#create-the-leavechannel-method)
-- [Create the setIdleTimerActive() Method](#create-the-setIdleTimerActive-method)
+- [Create the setIdleTimerActive() Method](#create-the-setidletimeractive-method)
 - [Create the alert() Method](#create-the-alert-method)
 
 

@@ -4,7 +4,7 @@ This tutorial describes how to add live video chat to your iOS applications usin
 
 With this sample app, you can:
 
-- [Join](#create-the-loadagorakit-method) / [leave](#create-the-leaveChannel-method) a channel
+- [Join](#create-the-loadagorakit-method) / [leave](#create-the-leavechannel-method) a channel
 - [Set user role as a broadcaster or audience member](#create-the-mainviewcontroller-extensions)
 - [Mute/unmute audio](#define-private-variables)
 - [Switch camera views](#create-the-doswitchcamerapressed-ibaction-method)
@@ -539,7 +539,7 @@ private extension RoomViewController {
 ```
 
 - [Create the updateSelfViewVisiable() Method](#create-the-updateselfviewvisiable-method)
-- [Create the leaveChannel() Method](#create-the-leaveChannel-method)
+- [Create the leaveChannel() Method](#create-the-leavechannel-method)
 - [Create the setIdleTimerActive() Method](#create-the-setIdleTimerActive-method)
 - [Create the alert() Method](#create-the-alert-method)
 

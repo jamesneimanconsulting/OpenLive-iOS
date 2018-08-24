@@ -4,7 +4,7 @@ This tutorial describes how to add live video chat to your iOS applications usin
 
 With this sample app, you can:
 
-- [Join](#create-the-loadagorakit-method) / [leave](#create-the-leavechannel-method) a channel
+- [Join](#create-the-loadagorakit-method)/[leave](#create-the-leavechannel-method) a channel
 - [Set user role as a broadcaster or audience member](#create-the-mainviewcontroller-extensions)
 - [Mute/unmute audio](#define-private-variables)
 - [Switch camera views](#create-the-doswitchcamerapressed-ibaction-method)
@@ -42,7 +42,7 @@ To build and run the sample application, you must obtain an app ID:
 
 2. Download the [Agora Video SDK](https://www.agora.io/en/download/). Unzip the downloaded SDK package and copy the `libs/AograRtcEngineKit.framework` file from the SDK folder into the sample application's `OpenLive` folder.
 			
-3. Connect your iPhone or iPad device and run the project. Ensure a valid provisioning profile is applied or your project will not run.
+3. Connect your iPhone or iPad device and run the project. Ensure a valid provisioning profile is applied, or your project will not run.
 
 ## Steps to Create the Sample 
 
@@ -101,7 +101,7 @@ Add the following assets to `Assets.xcassets`.
 Asset|Description
 ------|------
 `btn_close`|An image of an **X** to close a window|
-`btn_join` and `btn_join_cancel`|Images of a camera to join / leave a call
+`btn_join` and `btn_join_cancel`|Images of a camera to join/leave a call
 `btn_mute` and `btn_mute_cancel`|Images of a microphone to mute/unmute audio
 `btn_overturn`|An image of a camera and rotational arrows to switch between the two cameras
 `btn_setting`|An image of a cog to open the settings window
@@ -548,9 +548,9 @@ private extension RoomViewController {
 
 The `updateSelfViewVisiable()` method sets the session buttons to hidden/not hidden.
 
-Update the image for `broadcastButton` using `setImage()`
+Update the image for `broadcastButton` using `setImage()`.
 
-For each `button` in `sessionButtons`, show the button if the user is a broadcaster, otherwise show the button.
+For each `button` in `sessionButtons`, show the button if the user is a broadcaster. Otherwise, show the button.
 
 ``` Swift
 private extension LiveRoomViewController {
@@ -663,11 +663,11 @@ The `updateInterface()` method with `animation` checks if animation is used for 
 
 The `updateInterface()` method without animation updates the layout for the video views.
 
-- If the user is not a broadcaster and `displaySessions` is empty, remove the first session using `displaySessions.removeFirst()`
+- If the user is not a broadcaster and `displaySessions` is empty, remove the first session using `displaySessions.removeFirst()`.
 
-- Use `viewLayouter.layout()` to update the layout of `displaySessions`
+- Use `viewLayouter.layout()` to update the layout of `displaySessions`.
 
-- Set the stream type for the sessions using `setStreamType()`
+- Set the stream type for the sessions using `setStreamType()`.
 
 ``` Swift
     func updateInterface() {
@@ -686,8 +686,8 @@ The `setStreamType()` method sets the stream type for each session.
 
 Set each session's remote video stream type using `rtcEngine.setRemoteVideoStream`. 
 
-- If `fullSession` is valid, and the session is equal to `fullSession`, set the type to `.high`, otherwise set the stream type to `.low`.
-- If `fullSession` is not valid, set all session video stream types to `.high`
+- If `fullSession` is valid, and the session is equal to `fullSession`, set the type to `.high`. Otherwise, set the stream type to `.low`.
+- If `fullSession` is not valid, set all session video stream types to `.high`.
 
 ``` Swift
     func setStreamType(forSessions sessions: [VideoSession], fullSession: VideoSession?) {
@@ -759,14 +759,14 @@ The methods for the Agora SDK are placed within extensions for `LiveRoomViewCont
 
 The `loadAgoraKit()` method initializes the Agora RTC engine using `AgoraRtcEngineKit.sharedEngine()`.
 
-Create an `AgoraRtcEngineKit` shared engine object with `KeyCenter.AppId` using `AgoraRtcEngineKit.sharedEngine()`
+Create an `AgoraRtcEngineKit` shared engine object with `KeyCenter.AppId` using `AgoraRtcEngineKit.sharedEngine()`.
 
 Apply the following settings for `rtcEngine`:
 
-- Set channel profile to live broadcasting using `rtcEngine.setChannelProfile()`
-- Enable dual stream mode using `rtcEngine.enableDualStreamMode()`
-- Enable video using `rtcEngine.enableVideo()`
-- Set the video encoder configuration using `rtcEngine.setVideoEncoderConfiguration()`
+- Set channel profile to live broadcasting using `rtcEngine.setChannelProfile()`.
+- Enable dual stream mode using `rtcEngine.enableDualStreamMode()`.
+- Enable video using `rtcEngine.enableVideo()`.
+- Set the video encoder configuration using `rtcEngine.setVideoEncoderConfiguration()`.
 
 ``` Swift
 private extension LiveRoomViewController {
@@ -788,7 +788,7 @@ private extension LiveRoomViewController {
 }
 ```
 
-If the user is a broadcaster, start the preview using `rtcEngine.startPreview()` and invoke `addLocalSession()`
+If the user is a broadcaster, start the preview using `rtcEngine.startPreview()` and invoke `addLocalSession()`.
 
 ``` Swift
         if isBroadcaster {
